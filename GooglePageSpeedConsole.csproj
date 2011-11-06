@@ -15,7 +15,7 @@
 
 	<Target Name="Build">
 		<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
-		<Csc References="@(Reference)" Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />
+		<Csc References="@(Reference)" Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" DocumentationFile="$(OutputPath)docs.xml" />
 		<Copy SourceFiles="@(Reference)" DestinationFolder="$(OutputPath)" />
 	</Target>
 	
