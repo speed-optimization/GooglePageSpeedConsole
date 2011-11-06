@@ -6,7 +6,7 @@ This is just a little console app that returns the Google Page Speed score for a
 Compilation
 -----------
 
-	msbuild GooglePageSpeedConsole.csproj
+	C:\GooglePageSpeedConsole> msbuild GooglePageSpeedConsole.csproj
 
 Prerequisite
 ------------
@@ -16,4 +16,4 @@ A Google Page Speed API key from the [API's console page](https://code.google.co
 Usage
 -----
 
-	GooglePageSpeedConsole.exe your_api_key http://www.someurl.com
+	C:\GooglePageSpeedConsole> bin\GooglePageSpeedConsole.exe your_api_key http://www.someurl.com
