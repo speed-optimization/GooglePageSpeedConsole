@@ -1,0 +1,23 @@
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<AssemblyName>GooglePageSpeedConsole</AssemblyName>
+		<OutputPath>bin\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Program.cs" />
+		<Compile Include="Result.cs" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="lib\Newtonsoft.Json.dll" />
+	</ItemGroup>
+
+	<Target Name="Build">
+		<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
+		<Csc References="@(Reference)" Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />
+		<Copy SourceFiles="@(Reference)" DestinationFolder="$(OutputPath)" />
+	</Target>
+	
+</Project>
