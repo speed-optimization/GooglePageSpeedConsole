@@ -6,8 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Include="Program.cs" />
-		<Compile Include="Result.cs" />
+		<Compile Include="src\*.cs" />
 	</ItemGroup>
 	
 	<ItemGroup>
