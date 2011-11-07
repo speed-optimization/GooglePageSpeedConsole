@@ -8,9 +8,9 @@ namespace GooglePageSpeedConsole
 	class Program
 	{
 		/** 
-		<summary>Main entry point to the console app. Uses Google Page Speed's API to Console.Write the Page Speed score of a given URL.</summary>
-		<param name="args[0]">String. Required. The API key to Google Page Speed.</param>
-		<param name="args[1]">String. Required. The URL of the site to test.</param>
+		<summary>Uses Google Page Speed's API to write the Page Speed score of a given URL.</summary>
+		<param name="args[0]">String (required). Google API key.</param>
+		<param name="args[1]">String (required). URL of the site to test.</param>
 		<example><c>GooglePageSpeedConsole.exe 08234klfuiop093248jlKa http://www.hotmail.com</c></example>
 		*/
 		static void Main(string[] args)
