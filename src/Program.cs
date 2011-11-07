@@ -9,8 +9,7 @@ namespace GooglePageSpeedConsole
 	{
 		/** 
 		<summary>Uses Google Page Speed's API to write the Page Speed score of a given URL.</summary>
-		<param name="args[0]">String (required). Google API key.</param>
-		<param name="args[1]">String (required). URL of the site to test.</param>
+		<param name="args">The first param is a required String: the Google API key, and the second param is a required String: the URL of the site to test.</param>
 		<example><c>GooglePageSpeedConsole.exe 08234klfuiop093248jlKa http://www.hotmail.com</c></example>
 		*/
 		static void Main(string[] args)
