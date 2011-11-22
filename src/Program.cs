@@ -16,7 +16,16 @@ namespace GooglePageSpeedConsole
 		{
 			string json = GetJsonFromGoogle(args[0], args[1]);
 			Result result = JsonConvert.DeserializeObject<Result>(json);
-			Console.WriteLine(result.Score);
+			Console.WriteLine("Google Page Speed Score: " + result.Score);
+			if (args.Length > 2)
+			{
+				int minimumScore = Int32.Parse(args[2]);
+				if (result.Score < minimumScore)
+				{
+					Environment.Exit(-1);
+				}
+			}
+			Environment.Exit(0);
 		}
 		
 		private static string GetJsonFromGoogle(string apiKey, string siteUrl)
